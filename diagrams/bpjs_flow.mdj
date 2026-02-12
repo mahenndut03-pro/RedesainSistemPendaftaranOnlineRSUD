@@ -1,0 +1,57 @@
+{
+  "type": "Project",
+  "name": "BPJS Flow Project",
+  "ownedElements": [
+    {
+      "id": "model1",
+      "type": "UMLModel",
+      "name": "Model",
+      "ownedElements": [
+        {
+          "id": "activity1",
+          "type": "UMLActivity",
+          "name": "BPJS Flow",
+          "ownedElements": [
+            { "id": "initial1", "type": "UMLInitialNode" },
+            { "id": "action_input", "type": "UMLAction", "name": "Input BPJS" },
+            { "id": "action_validasi", "type": "UMLAction", "name": "Validasi" },
+            { "id": "action_cek", "type": "UMLAction", "name": "Cek Kuota" },
+            { "id": "action_verif", "type": "UMLAction", "name": "Verifikasi" },
+            { "id": "action_nomor", "type": "UMLAction", "name": "Nomor Antrian" },
+            { "id": "final1", "type": "UMLActivityFinalNode" },
+
+            { "id": "flow0", "type": "UMLControlFlow", "source": { "$ref": "initial1" }, "target": { "$ref": "action_input" } },
+            { "id": "flow1", "type": "UMLControlFlow", "source": { "$ref": "action_input" }, "target": { "$ref": "action_validasi" } },
+            { "id": "flow2", "type": "UMLControlFlow", "source": { "$ref": "action_validasi" }, "target": { "$ref": "action_cek" } },
+            { "id": "flow3", "type": "UMLControlFlow", "source": { "$ref": "action_cek" }, "target": { "$ref": "action_verif" } },
+            { "id": "flow4", "type": "UMLControlFlow", "source": { "$ref": "action_verif" }, "target": { "$ref": "action_nomor" } },
+            { "id": "flow5", "type": "UMLControlFlow", "source": { "$ref": "action_nomor" }, "target": { "$ref": "final1" } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "diagram1",
+      "type": "UMLActivityDiagram",
+      "name": "BPJS Flow Diagram",
+      "element": { "$ref": "activity1" },
+      "children": [
+        { "id": "view_initial", "type": "UMLInitialNodeView", "model": { "$ref": "initial1" }, "x": 60, "y": 120 },
+        { "id": "view_input", "type": "UMLActionView", "model": { "$ref": "action_input" }, "x": 180, "y": 110, "width": 120, "height": 40 },
+        { "id": "view_validasi", "type": "UMLActionView", "model": { "$ref": "action_validasi" }, "x": 340, "y": 110, "width": 120, "height": 40 },
+        { "id": "view_cek", "type": "UMLActionView", "model": { "$ref": "action_cek" }, "x": 500, "y": 110, "width": 120, "height": 40 },
+        { "id": "view_verif", "type": "UMLActionView", "model": { "$ref": "action_verif" }, "x": 660, "y": 110, "width": 120, "height": 40 },
+        { "id": "view_nomor", "type": "UMLActionView", "model": { "$ref": "action_nomor" }, "x": 820, "y": 110, "width": 140, "height": 40 },
+        { "id": "view_final", "type": "UMLActivityFinalNodeView", "model": { "$ref": "final1" }, "x": 990, "y": 120 },
+
+        { "id": "view_f0", "type": "UMLControlFlowView", "model": { "$ref": "flow0" } },
+        { "id": "view_f1", "type": "UMLControlFlowView", "model": { "$ref": "flow1" } },
+        { "id": "view_f2", "type": "UMLControlFlowView", "model": { "$ref": "flow2" } },
+        { "id": "view_f3", "type": "UMLControlFlowView", "model": { "$ref": "flow3" } },
+        { "id": "view_f4", "type": "UMLControlFlowView", "model": { "$ref": "flow4" } },
+        { "id": "view_f5", "type": "UMLControlFlowView", "model": { "$ref": "flow5" } }
+      ]
+    }
+  ]
+}

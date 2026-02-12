@@ -1,0 +1,12 @@
+export default {
+  darkMode: 'class', // <— ini wajib
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}

@@ -1,0 +1,52 @@
+<?php
+
+return [
+    'disable' => env('CAPTCHA_DISABLE', false),
+    'characters' => ['a', 'b', 'c', 'd','e', 'f', 'h', 'i', 'k', 'm', 'n', 'o', 'p', 'r', 's', 't', 'u', 'v', 'w', 'x', 'z',],
+    'fontsDirectory' => dirname(__DIR__) . '/assets/fonts',
+    'bgsDirectory' => dirname(__DIR__) . '/assets/backgrounds',
+    'default' => [
+        'length' => 4,
+        'width' => 345,
+        'height' => 65,
+        'quality' => 90,
+        'math' => false,
+        //'expire' => 60,
+        'encrypt' => false,
+    ],
+    'flat' => [
+        'length' => 6,
+        'fontColors' => ['#0b1d2fff', '#c0392b', '#313702ff', '#c0392b', '#8e44ad', '#303f9f', '#f57c00', '#795548'],
+        'width' => 345,
+        'height' => 65,
+        'math' => false,
+        'quality' => 100,
+        'lines' => 6,
+        'bgImage' => true,
+        'bgColor' => '#080808ff',
+        'contrast' => 0,
+    ],
+    'mini' => [
+        'length' => 3,
+        'width' => 60,
+        'height' => 32,
+    ],
+    'inverse' => [
+        'length' => 5,
+        'width' => 120,
+        'height' => 36,
+        'quality' => 90,
+        'sensitive' => true,
+        'angle' => 12,
+        'sharpen' => 10,
+        'blur' => 2,
+        'invert' => false,
+        'contrast' => -5,
+    ],
+    'math' => [
+        'length' => 9,
+        'width' => 120,
+        'height' => 36,
+        'quality' => 90,
+    ],
+];
